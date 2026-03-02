@@ -9,6 +9,12 @@ function App() {
   const [scrolled, setScrolled] = useState(false)
   const [islandHovered, setIslandHovered] = useState(false)
 
+  const images = [
+    "/documents/background.jpg",
+    "/documents/background2.jpg",
+    "/documents/background3.jpg",
+  ]
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100)
@@ -37,8 +43,8 @@ function App() {
           </div>
         </div>
 
-        <section id="top" className="px-8 pt-8 max-w-7xl mx-auto">
-          <Hero />
+        <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
+          <Hero images={images} />
         </section>
 
 
