@@ -13,6 +13,17 @@ function App() {
     "/documents/background.jpg",
     "/documents/background2.jpg",
     "/documents/background3.jpg",
+    "/documents/background4.webp",
+    "/documents/background5.webp",
+    "/documents/background6.webp",
+    "/documents/background7.webp",
+    "/documents/background8.webp",
+    "/documents/background9.webp",
+    "/documents/background10.webp",
+    "/documents/background11.webp",
+    "/documents/background12.webp",
+    "/documents/background13.webp",
+    
   ]
 
   useEffect(() => {
@@ -36,7 +47,7 @@ function App() {
             scrolled && !islandHovered ? "-top-12" : "top-6"
           }`}
         >
-          <div className="flex items-center gap-4 bg-slate-800/60 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
+          <div className="flex items-center gap-4 bg-slate-900/60 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
             <LinkButton link="https://www.linkedin.com/in/christian-puello-935a032b1/" icon="/icons/linkedinicon.png" />
             <LinkButton link="https://github.com/ChristianPuello" icon="/icons/github.jpg" />
             <LinkButton link="/documents/Resume (2).pdf" icon="/icons/resume.png" />
