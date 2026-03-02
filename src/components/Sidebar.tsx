@@ -10,15 +10,13 @@ const sections = [
 
 export default function Sidebar() {
   const [active, setActive] = useState("")
-  const [hovered, setHovered] = useState(false)
+  const [stuck, setStuck] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id)
-          }
+          if (entry.isIntersecting) setActive(entry.target.id)
         })
       },
       { threshold: 0.1 }
@@ -32,39 +30,41 @@ export default function Sidebar() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const hero = document.getElementById("top")
+      if (hero) {
+        const bottom = hero.getBoundingClientRect().bottom
+        setStuck(bottom <= 60)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <div
-      className="fixed top-1/2 left-0 -translate-y-1/2 z-40 flex flex-col gap-2"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className={`z-40 transition-all duration-300 ${
+        stuck
+          ? "fixed top-0 left-0 right-0 bg-slate-800/80 backdrop-blur-sm shadow-lg"
+          : "relative bg-transparent"
+      }`}
     >
-      {sections.map(({ id, label }) => (
-        <a
-          key={id}
-          href={`#${id}`}
-          className={`flex items-center gap-3 py-2 pr-4 pl-3 transition-all duration-300 rounded-r-lg group
-            ${active === id
-              ? "bg-slate-700 border-l-2 border-blue-400"
-              : "bg-slate-800 border-l-2 border-slate-600 hover:border-blue-400"
+      <nav className="flex items-center justify-center gap-8 px-8 py-3">
+        {sections.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={`text-sm font-medium transition-all duration-200 pb-1 ${
+              active === id
+                ? "text-white border-b-2 border-blue-400"
+                : "text-slate-400 hover:text-white"
             }`}
-        >
-          {/* dot indicator */}
-          <span
-            className={`w-2 h-2 rounded-full flex-shrink-0 transition-colors duration-300 ${
-              active === id ? "bg-blue-400" : "bg-slate-500 group-hover:bg-blue-400"
-            }`}
-          />
-
-          {/* label - slides in on hover */}
-          <span
-            className={`text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 ${
-              active === id ? "text-white" : "text-slate-400 group-hover:text-white"
-            } ${hovered ? "max-w-xs opacity-100" : "max-w-0 opacity-0"}`}
           >
             {label}
-          </span>
-        </a>
-      ))}
+          </a>
+        ))}
+      </nav>
     </div>
   )
 }

@@ -27,7 +27,7 @@ function App() {
     <>
       <FallingSeals />
       <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-90 text-white">
-        <Sidebar />
+        
 
         <div
           onMouseEnter={() => setIslandHovered(true)}
@@ -46,6 +46,8 @@ function App() {
         <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
           <Hero images={images} />
         </section>
+
+        <Sidebar />
 
 
         <section id="1" className="py-64">
