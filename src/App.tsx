@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <FallingSeals />
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-90 text-white">
         <Sidebar />
 
         <div
@@ -37,7 +37,7 @@ function App() {
           </div>
         </div>
 
-        <section id="top">
+        <section id="top" className="px-8 pt-8 max-w-7xl mx-auto">
           <Hero />
         </section>
 

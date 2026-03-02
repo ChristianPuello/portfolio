@@ -1,29 +1,25 @@
-import landscapeImg from "../assets/background2.jpg" // your image path
+import landscapeImg from "../assets/background3.jpg" // your image path
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-96">
+    <div className="relative w-full h-96 overflow-hidden rounded-3xl">
       
-      {/* Background image */}
+      
       <img
         src={landscapeImg}
         alt="landscape"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-3xl drop shadow-2xl"
       />
 
-      {/* Welcome text */}
-      <div className="absolute inset-0 flex flex-col items-left justify-center">
-        <h2 className=" p-6 text-white text-4xl font-bold tracking-wide drop-shadow-lg">
-          Welcome
+      <div className="absolute inset-0 flex flex-col items-left justify-center drop-shadow-lg">
+        <h2 className=" text-white text-4xl font-bold tracking-wide drop-shadow-lg pl-5">
+          Welcome To Christian's Portfolio
         </h2>
-        <p className="p-6 text-white text-lg mt-2 drop-shadow-md">
-          Some subtitle here
+        <p className=" text-white text-lg mt-2 drop-shadow-md pl-6">
+          
         </p>
       </div>
-
-      {/* Fade to your bg color at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-900" />
-
+    
     </div>
   )
 }
