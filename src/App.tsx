@@ -61,36 +61,52 @@ function App() {
         <Sidebar />
 
 
-        <section id="1" className="py-64">
+        <section id="1" className="py-32">
         <div className="p-9 grid grid-cols-3 gap-6">
-          <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-          <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-          <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
+          <Card
+            title="Clearcoat" 
+            bodytext="All-in-one car detailing busniess solution; for clients and owners." 
+            tag="Mobile/ Web App" 
+            year="2026" 
+            image="/documents/clearcoatlogo.png"
+          />
+          <Card
+            title="Liftos" 
+            bodytext="Mobile app workout logger + Bluetooth enabled device that allows for automatic workout logging and feedback" 
+            tag="Mobile" 
+            year="2026" 
+            image="/documents/liftos.png"
+          />
+
+          <Card 
+            title="Coming Soon" 
+            bodytext="" 
+            year="..."
+          />
+
+          <Card 
+            title="Coming Soon" 
+            bodytext=""
+            year="..."
+          />
+          <Card 
+            title="Coming Soon" 
+            bodytext=""
+            year="..."
+          />
         </div>
         </section>
         
         <section id="2" className="py-64">
-          <div className="p-9 grid grid-cols-3 gap-6">
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-          </div>
+          
         </section>
 
         <section id="3" className="py-64">
-          <div className="p-9 grid grid-cols-3 gap-6">
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-          </div>
+          
         </section>
 
         <section id="4" className="py-64">
-          <div className="p-9 grid grid-cols-3 gap-6">
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-            <Card title="example" bodytext="lafuahfodhfisdhfiaoshflidsahfadsfsa lfhskljadhf kljsahdf ksjhaflksjhd fljadkshd flkjsah fkjldhsalkjfh sakjfhsakfdhl"></Card>
-          </div>
+          
         </section>
         
 
