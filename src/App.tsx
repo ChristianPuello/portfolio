@@ -57,13 +57,23 @@ function App() {
 
         
           <section 
-            className="flex flex-col gap-3 py-64 px-5"
+            className="flex flex-col gap-3 py-48 px-5"
             style={{ 
               backgroundImage: "url('/tri.svg')",
               backgroundSize: "cover",
               backgroundRepeat: "repeat",
             }}
           > 
+
+            <div className="relative w-48 h-48">
+              <div className="absolute inset-0 rounded-full bg-emerald-400/30 blur-md scale-110" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-emerald-400/60" />
+              <img 
+                src="/documents/pfp.png" 
+                className="w-48 h-48 rounded-full object-cover relative z-10"
+              />
+            </div>
+
             <h1 className="text-9xl font-bold text-zinc-200 leading-tight tracking-tight">
               Christian Arthur Puello
             </h1>
