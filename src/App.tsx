@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <FallingSeals />
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-90 text-white">
+      <div className="min-h-screen bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-white">
         
 
         <div
@@ -47,12 +47,36 @@ function App() {
             scrolled && !islandHovered ? "-top-12" : "top-6"
           }`}
         >
-          <div className="flex items-center gap-4 bg-slate-900/60 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
+          <div className="flex items-center gap-4 bg-zinc-300/20 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
             <LinkButton link="https://www.linkedin.com/in/christian-puello-935a032b1/" icon="/icons/linkedinicon.png" />
             <LinkButton link="https://github.com/ChristianPuello" icon="/icons/github.jpg" />
             <LinkButton link="/documents/Resume (2).pdf" icon="/icons/resume.png" />
           </div>
         </div>
+
+
+        
+          <section 
+            className="flex flex-col gap-3 py-64 px-5"
+            style={{ 
+              backgroundImage: "url('/tri.svg')",
+              backgroundSize: "cover",
+              backgroundRepeat: "repeat",
+            }}
+          > 
+            <h1 className="text-9xl font-bold text-zinc-200 leading-tight tracking-tight">
+              Christian Arthur Puello
+            </h1>
+
+            <h2 className="text-4xl gap-3 px-5 text-zinc-200 font-normal">
+              CS @ UCF | Aspiring SWE
+            </h2>
+
+            <p className="text-xl gap-3 px-5 text-zinc-200 font-normal">
+              I'm Christian, a software designer. My vision is to create projects that will push the needle.
+            </p>
+          </section>
+        
 
         <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
           <Hero images={images} />

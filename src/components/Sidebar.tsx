@@ -46,7 +46,7 @@ export default function Sidebar() {
     <div
       className={`z-40 transition-all duration-300 ${
         stuck
-          ? "fixed top-0 left-0 right-0 bg-slate-800/80 backdrop-blur-sm shadow-lg"
+          ? "fixed top-0 left-0 right-0 bg-zinc-300/80 backdrop-blur-sm shadow-lg"
           : "relative bg-transparent"
       }`}
     >
