@@ -55,9 +55,11 @@ function App() {
         </div>
 
 
-        
+          <Sidebar />
+
+
           <section 
-            className="flex flex-col gap-3 py-48 px-5"
+            className="flex flex-col gap-3 justify-center min-h-screen px-5"
             style={{ 
               backgroundImage: "url('/tri.svg')",
               backgroundSize: "cover",
@@ -91,9 +93,6 @@ function App() {
         <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
           <Hero images={images} />
         </section>
-
-        <Sidebar />
-
 
         <section id="1" className="py-32">
         <div className="p-9 grid grid-cols-3 gap-6">
