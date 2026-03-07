@@ -23,7 +23,6 @@ function App() {
     "/documents/background11.webp",
     "/documents/background12.webp",
     "/documents/background13.webp",
-    
   ]
 
   useEffect(() => {
@@ -36,10 +35,84 @@ function App() {
 
   return (
     <>
-      <FallingSeals />
-      <div className="min-h-screen bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-white">
-        
+      <style>{`
+        .aurora-container {
+          filter: blur(80px);
+          opacity: 0.7;
+        }
 
+        .aurora {
+          position: absolute;
+          border-radius: 50%;
+          mix-blend-mode: screen;
+        }
+
+        .aurora-1 {
+          width: 80vw;
+          height: 60vh;
+          top: -20%;
+          left: -10%;
+          background: radial-gradient(ellipse, rgba(16,185,129,0.6) 0%, transparent 70%);
+          animation: aurora-drift-1 12s infinite alternate ease-in-out;
+        }
+
+        .aurora-2 {
+          width: 60vw;
+          height: 70vh;
+          top: 10%;
+          right: -15%;
+          background: radial-gradient(ellipse, rgba(6,182,212,0.5) 0%, transparent 70%);
+          animation: aurora-drift-2 16s infinite alternate ease-in-out;
+        }
+
+        .aurora-3 {
+          width: 50vw;
+          height: 50vh;
+          bottom: 0%;
+          left: 20%;
+          background: radial-gradient(ellipse, rgba(52,211,153,0.4) 0%, transparent 70%);
+          animation: aurora-drift-3 10s infinite alternate ease-in-out;
+        }
+
+        .aurora-4 {
+          width: 40vw;
+          height: 40vh;
+          top: 30%;
+          left: 40%;
+          background: radial-gradient(ellipse, rgba(20,184,166,0.35) 0%, transparent 70%);
+          animation: aurora-drift-4 18s infinite alternate ease-in-out;
+        }
+
+        @keyframes aurora-drift-1 {
+          0%   { transform: translate(0%, 0%) scale(1); }
+          50%  { transform: translate(8%, 12%) scale(1.1); }
+          100% { transform: translate(-5%, 6%) scale(0.95); }
+        }
+
+        @keyframes aurora-drift-2 {
+          0%   { transform: translate(0%, 0%) scale(1); }
+          50%  { transform: translate(-10%, 8%) scale(1.15); }
+          100% { transform: translate(5%, -10%) scale(1.05); }
+        }
+
+        @keyframes aurora-drift-3 {
+          0%   { transform: translate(0%, 0%) scale(1); }
+          50%  { transform: translate(12%, -8%) scale(1.2); }
+          100% { transform: translate(-8%, 5%) scale(0.9); }
+        }
+
+        @keyframes aurora-drift-4 {
+          0%   { transform: translate(0%, 0%) scale(1); }
+          50%  { transform: translate(-6%, 10%) scale(1.1); }
+          100% { transform: translate(10%, -5%) scale(1.05); }
+        }
+      `}</style>
+
+      <FallingSeals />
+
+      <div className="min-h-screen bg-gradient-to-r from-emerald-950 via-emerald-900 bg-emerald-950 text-white">
+
+        {/* Links island - top right */}
         <div
           onMouseEnter={() => setIslandHovered(true)}
           onMouseLeave={() => setIslandHovered(false)}
@@ -54,24 +127,28 @@ function App() {
           </div>
         </div>
 
+        <Sidebar />
 
-          <Sidebar />
+        {/* Hero section with aurora */}
+        <section
+          id="hero"
+          className="relative flex flex-col gap-3 justify-center min-h-screen px-5 overflow-hidden bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950"
+        >
+          {/* Aurora layers */}
+          <div className="aurora-container absolute inset-0 z-0">
+            <div className="aurora aurora-1" />
+            <div className="aurora aurora-2" />
+            <div className="aurora aurora-3" />
+            <div className="aurora aurora-4" />
+          </div>
 
-
-          <section 
-            className="flex flex-col gap-3 justify-center min-h-screen px-5"
-            style={{ 
-              backgroundImage: "url('/tri.svg')",
-              backgroundSize: "cover",
-              backgroundRepeat: "repeat",
-            }}
-          > 
-
+          {/* Content sits above aurora */}
+          <div className="relative z-10 flex flex-col gap-3">
             <div className="relative w-48 h-48">
               <div className="absolute inset-0 rounded-full bg-emerald-400/30 blur-md scale-110" />
               <div className="absolute inset-0 rounded-full ring-2 ring-emerald-400/60" />
-              <img 
-                src="/documents/pfp.png" 
+              <img
+                src="/documents/pfp.png"
                 className="w-48 h-48 rounded-full object-cover relative z-10"
               />
             </div>
@@ -87,63 +164,39 @@ function App() {
             <p className="text-xl gap-3 px-5 text-zinc-200 font-normal">
               I'm Christian, a software designer. My vision is to create projects that will push the needle.
             </p>
-          </section>
-        
+          </div>
+        </section>
 
         <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
           <Hero images={images} />
         </section>
 
         <section id="1" className="py-32">
-        <div className="p-9 grid grid-cols-3 gap-6">
-          <Card
-            title="Clearcoat" 
-            bodytext="All-in-one car detailing busniess solution; for clients and owners." 
-            tag="Mobile/ Web App" 
-            year="2026" 
-            image="/documents/clearcoatlogo.png"
-          />
-          <Card
-            title="Liftos" 
-            bodytext="Mobile app workout logger + Bluetooth enabled device that allows for automatic workout logging and feedback" 
-            tag="Mobile" 
-            year="2026" 
-            image="/documents/liftos.png"
-          />
-
-          <Card 
-            title="Coming Soon" 
-            bodytext="" 
-            year="..."
-          />
-
-          <Card 
-            title="Coming Soon" 
-            bodytext=""
-            year="..."
-          />
-          <Card 
-            title="Coming Soon" 
-            bodytext=""
-            year="..."
-          />
-        </div>
-        </section>
-        
-        <section id="2" className="py-64">
-          
+          <div className="p-9 grid grid-cols-3 gap-6">
+            <Card
+              title="Clearcoat"
+              bodytext="All-in-one car detailing busniess solution; for clients and owners."
+              tag="Mobile/ Web App"
+              year="2026"
+              image="/documents/clearcoatlogo.png"
+            />
+            <Card
+              title="Liftos"
+              bodytext="Mobile app workout logger + Bluetooth enabled device that allows for automatic workout logging and feedback"
+              tag="Mobile"
+              year="2026"
+              image="/documents/liftos.png"
+            />
+            <Card title="Coming Soon" bodytext="" year="..." />
+            <Card title="Coming Soon" bodytext="" year="..." />
+            <Card title="Coming Soon" bodytext="" year="..." />
+          </div>
         </section>
 
-        <section id="3" className="py-64">
-          
-        </section>
+        <section id="2" className="py-64" />
+        <section id="3" className="py-64" />
+        <section id="4" className="py-64" />
 
-        <section id="4" className="py-64">
-          
-        </section>
-        
-
-        
       </div>
     </>
   )
