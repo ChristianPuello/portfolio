@@ -4,6 +4,7 @@ import LinkButton from "./components/LinkButton"
 import FallingSeals from "./components/FallingSeals"
 import Hero from "./components/Hero"
 import Sidebar from "./components/Sidebar"
+import Gallery from "./components/gallery"
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -110,7 +111,17 @@ function App() {
 
       <FallingSeals />
 
-      <div className="min-h-screen bg-gradient-to-r from-emerald-950 via-emerald-900 bg-emerald-950 text-white">
+      {/* Fixed full-site aurora background */}
+        <div className="fixed inset-0 z-0 overflow-hidden bg-emerald-950">
+          <div className="aurora-container absolute inset-0">
+            <div className="aurora aurora-1" />
+            <div className="aurora aurora-2" />
+            <div className="aurora aurora-3" />
+            <div className="aurora aurora-4" />
+          </div>
+        </div>
+
+      <div className="min-h-screen bg-transparent text-white relative z-10">
 
         {/* Links island - top right */}
         <div
@@ -132,15 +143,8 @@ function App() {
         {/* Hero section with aurora */}
         <section
           id="hero"
-          className="relative flex flex-col gap-3 justify-center min-h-screen px-5 overflow-hidden bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950"
+          className="relative flex flex-col gap-3 justify-center min-h-screen px-5"
         >
-          {/* Aurora layers */}
-          <div className="aurora-container absolute inset-0 z-0">
-            <div className="aurora aurora-1" />
-            <div className="aurora aurora-2" />
-            <div className="aurora aurora-3" />
-            <div className="aurora aurora-4" />
-          </div>
 
           {/* Content sits above aurora */}
           <div className="relative z-10 flex flex-col gap-3">
@@ -154,7 +158,7 @@ function App() {
             </div>
 
             <h1 className="text-9xl font-bold text-zinc-200 leading-tight tracking-tight">
-              Christian Arthur Puello
+              Christian A. Puello
             </h1>
 
             <h2 className="text-4xl gap-3 px-5 text-zinc-200 font-normal">
@@ -167,11 +171,9 @@ function App() {
           </div>
         </section>
 
-        <section id="top" className="px-8 pt-8 max-w-9xl mx-auto">
-          <Hero images={images} />
-        </section>
+       
 
-        <section id="1" className="py-32">
+        <section id="1" className="py-16">
           <div className="p-9 grid grid-cols-3 gap-6">
             <Card
               title="Clearcoat"
@@ -193,10 +195,8 @@ function App() {
           </div>
         </section>
 
-        <section id="2" className="py-64" />
-        <section id="3" className="py-64" />
-        <section id="4" className="py-64" />
-
+        <section id="2" className="" />
+         <Gallery />
       </div>
     </>
   )

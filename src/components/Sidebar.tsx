@@ -4,8 +4,6 @@ const sections = [
   { id: "top", label: "Home" },
   { id: "1", label: "Projects" },
   { id: "2", label: "Gallery" },
-  { id: "3", label: "Skills" },
-  { id: "4", label: "Contact" },
 ]
 
 export default function Sidebar() {
@@ -55,9 +53,7 @@ export default function Sidebar() {
             }`}
           >
             {label}
-            {active === id && (
-              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-emerald-400" />
-            )}
+            
           </a>
         ))}
       </nav>

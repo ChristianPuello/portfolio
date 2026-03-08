@@ -9,7 +9,7 @@ type CardProps = {
 function Card({ title, bodytext, tag = "Project", year = "2024", image }: CardProps) {
   return (
     <div
-      className="group relative flex flex-col justify-between h-80 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_64px_rgba(0,0,0,0.5)]"
+      className="group relative flex flex-col justify-between h-[500px] m-4 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_64px_rgba(0,0,0,0.5)]"
       style={image ? { backgroundImage: `url('${image}')`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
     >
       {/* deep gradient overlay — heavy at bottom, light at top */}
