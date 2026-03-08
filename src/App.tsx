@@ -2,29 +2,13 @@ import { useState, useEffect } from "react"
 import Card from "./components/Card"
 import LinkButton from "./components/LinkButton"
 import FallingSeals from "./components/FallingSeals"
-import Hero from "./components/Hero"
 import Sidebar from "./components/Sidebar"
-import Gallery from "./components/gallery"
+import Gallery from "./components/Gallery"
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
   const [islandHovered, setIslandHovered] = useState(false)
 
-  const images = [
-    "/documents/background.jpg",
-    "/documents/background2.jpg",
-    "/documents/background3.jpg",
-    "/documents/background4.webp",
-    "/documents/background5.webp",
-    "/documents/background6.webp",
-    "/documents/background7.webp",
-    "/documents/background8.webp",
-    "/documents/background9.webp",
-    "/documents/background10.webp",
-    "/documents/background11.webp",
-    "/documents/background12.webp",
-    "/documents/background13.webp",
-  ]
 
   useEffect(() => {
     const handleScroll = () => {
