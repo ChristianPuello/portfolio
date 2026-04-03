@@ -159,13 +159,15 @@ function App() {
 
         <section id="1" className="py-16">
           <div className="p-9 grid grid-cols-3 gap-6">
-            <Card
-              title="Clearcoat"
-              bodytext="All-in-one car detailing busniess solution; for clients and owners."
-              tag="Mobile/ Web App"
-              year="2026"
-              image="/documents/clearcoatlogo.png"
-            />
+            <a href="https://clearcoat.vercel.app/" target="_blank">
+              <Card
+                title="Clearcoat"
+                bodytext="All-in-one car detailing busniess solution; for clients and owners."
+                tag="Mobile/ Web App"
+                year="2026"
+                image="/documents/clearcoatlogo.png"
+              />
+            </a>
             <Card
               title="Liftos"
               bodytext="Mobile app workout logger + Bluetooth enabled device that allows for automatic workout logging and feedback"
