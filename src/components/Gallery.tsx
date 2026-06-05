@@ -28,7 +28,6 @@ const galleryData = [
     title: "Getting Involved",
     description: "Late nights, hackathons, and friendships that push me to be better.",
     images: [
-      "/documents/hackathon pic 1.jpg",
       "/documents/hackathonpic2.jpg",
       "/documents/knightro.jpg",
     ],
