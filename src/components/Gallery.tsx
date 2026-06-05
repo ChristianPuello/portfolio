@@ -17,42 +17,22 @@ function useFadeInOnScroll() {
 }
 
 const galleryData = [
-  {
-    title: "The Beginning",
-    description: "Where it all started. Early days building, learning, and figuring out what I wanted to create.",
-    images: [
-      "/documents/background.jpg",
-      "/documents/background2.jpg",
-      "/documents/background3.jpg",
-    ],
-  },
-  {
+{
     title: "Projects & Progress",
     description: "Turning ideas into reality. Each project taught me something new about design, engineering, and persistence.",
     images: [
-      "/documents/background4.webp",
-      "/documents/background5.webp",
+      "/documents/projectpic1.jpg",
+      
     ],
-  },
-  {
+  },{
     title: "Getting Involved",
     description: "Late nights, hackathons, and friendships that push me to be better.",
     images: [
-      "/documents/background6.webp",
-      "/documents/background7.webp",
-      "/documents/background8.webp",
-      "/documents/background9.webp",
+      "/documents/hackathon pic 1.jpg",
+      "/documents/hackathonpic2.jpg",
+      "/documents/knightro.jpg",
     ],
-  },
-  {
-    title: "Future Plans",
-    description: "The rearview mirror is only for glancing, these are the things on my horizon.",
-    images: [
-      "/documents/background10.webp",
-      "/documents/background11.webp",
-      "/documents/background12.webp",
-    ],
-  },
+  }
 ]
 
 function ImageCluster({ images }: { images: string[] }) {
