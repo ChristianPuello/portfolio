@@ -118,7 +118,7 @@ function App() {
           <div className="flex items-center gap-4 bg-zinc-300/20 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-lg">
             <LinkButton link="https://www.linkedin.com/in/christian-puello-935a032b1/" icon="/icons/linkedinicon.png" />
             <LinkButton link="https://github.com/ChristianPuello" icon="/icons/github.jpg" />
-            <LinkButton link="/documents/Resume (2).pdf" icon="/icons/resume.png" />
+            <LinkButton link="/documents/Resume.pdf" icon="/icons/resume.png" />
           </div>
         </div>
 
